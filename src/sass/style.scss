@@ -1,3 +1,11 @@
-@use "/src/sass/base/variables.scss" as *;
-@use "/src/sass/base/mixins.scss" as *;
-@use "/src/sass/base/basic.scss" as *;
+@use "./blocks/promo.scss";
+@use "./blocks/events.scss";
+
+
+
+@use "./base/variables.scss";
+@use "./base/mixins.scss";
+@use "./base/basic.scss";
+
+@import "./libs/fontello.css";
+@import "./libs/modern-normalize.min.css";

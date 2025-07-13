@@ -1,0 +1,72 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+
+.events {
+    background-color: rgb(18, 17, 17);
+    width: 100%;
+    .slider {
+        @include slider;
+        .container {
+            padding: 0 23px;
+        }
+    }
+    &__result {
+        text-align: center;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 141%;
+        color: $tres;
+    }
+    &__line {
+        margin-top: 5px;
+        width: auto;
+        height: 1px;
+        background-color: $duo;
+    }
+
+    &__match {
+        margin-top: 10px;
+        display: flex;
+        column-gap: 30px;
+        justify-content: center;
+        &-matches {
+            border: 1px solid #f3a917;
+            background:rgb(18, 17, 17);
+            padding: 15px 31px;
+            width: 152px;
+            height: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            color: $duo;
+            &:hover {
+                background: #f3a917;
+                color: $tres;
+            }   
+        }
+        &-battles {
+            border: 1px solid #f3a917;
+            background:rgb(18, 17, 17);
+            padding: 15px 31px;
+            width: 152px;
+            height: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            color: $duo;
+            &:hover {
+                background: #f3a917;
+                color: $tres;
+            }   
+        }
+    }
+}
+
+
+.events__match-matches,
+.events__match-battles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

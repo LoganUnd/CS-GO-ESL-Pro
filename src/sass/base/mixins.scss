@@ -1,5 +1,192 @@
 @use "/src/sass/base/variables.scss" as *;
 
-@mixin button {
-    
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+// Flexbox mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+
+.events__content {
+  min-height: 400px; 
+}
+
+.slider .hover_watch {
+  display: none; /* or opacity: 0; pointer-events: none; */
+  .watch_btn {
+    display: none;
+  }
+}
+
+.slider:hover .hover_watch {
+  display: block; /* or opacity: 1; pointer-events: auto; */
+  .watch_btn {
+    display: block;
+  }
+}
+
+.slider:hover {
+  box-shadow: 0 0 0 4px #F3A917, 0 4px 10px 0 rgba(5, 5, 5, 0.5);
+  border: 1.5px solid #F3A917;
+  opacity: 36%;
+
+}
+
+@mixin slider {
+  position: relative;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  width: 336px;
+  height: 235px;
+  background-color: $uno;
+  .slider__namecard {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+      &-match {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 143%;
+          letter-spacing: 0.01em;
+          color: $tres;
+      }
+      &-data {
+          margin-left: 100px;
+          font-weight: 400;
+          font-size: 14px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1px;
+          color: $tres;
+          span {
+            color: $tres;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.18px;
+            }
+        }
+    }
+  .slider__line {
+    margin: 3px  0 0 0 ;
+    width: auto;
+    height: 1px;       
+    align-self: stretch;
+    stroke-width: 1px;
+    background-color: $duo;
+    z-index: 1;
+  }
+  .namecard__content {
+    padding-top: 19px;
+    display: flex;
+    column-gap: 20px;
+    img {
+      height: 25px;
+      width: 25px;
+    }
+    }
+  .slider__infocard {
+    margin-top: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+      &-names {
+          color: $tres;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 35px;
+      }
+      &-points {
+          width:  58px;
+          height: 30px;
+          display: flex;
+          padding: 5px 10px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border: 1px solid #F3A917;
+          color: $tres;
+          font-size: 14px;
+          font-weight: 700;
+      }
+  }
+  .slider__bottomcard {
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      &-time {
+          margin-top: 12px;
+          color: #757C84;
+          font-family: Montserrat;
+          font-size: 10px;
+          font-weight: 400;
+          letter-spacing: 0.1px;
+      }
+      img.group {
+          display: block;
+          width: 61px;
+          height: 18px;
+          }
+  }
+  &:hover .hover_watch {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(206, 225, 67, 0.25);
+    background: rgba(7, 7, 7, 0.76);
+    .watch_btn {
+      width: 166px;
+      height: 40px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      position: absolute;
+      left: 66px;
+      top: -125px;
+      background: $duo;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 143%;
+      letter-spacing: 0.01em;
+      color: $tres;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      img {
+        margin: -7px auto;
+      }
+    }
+  }
 }

@@ -10,7 +10,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "src/sass/base/variables.scss"; @import "src/sass/base/mixins.scss";`
+        // Removed additionalData to avoid conflicts with @use rules
       }
     }
   }
