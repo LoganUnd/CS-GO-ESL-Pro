@@ -1,0 +1,54 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.register {
+    background-color: $duo;
+    padding-bottom: 30px;
+    &__title {
+        padding-top: 30px;
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 109%;
+        color: #000;
+        text-align: center;
+    }
+    &__descr {
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 167%;
+        letter-spacing: 0.01em;
+        color: #000;
+        text-align: center;
+        span {
+            color: $tres;
+        }
+    }
+    &__btn {
+        display: flex;
+        margin: 15px auto;
+        border-radius: 5px;
+        padding: 10px;
+        width: 200px;
+        height: 39px;
+        background:$tres;
+        border: none;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        gap: 3px;
+        img {
+            display: block;
+            margin: -7px auto;
+            width: 18px;
+            height: 18px;
+        }
+        .btn_descr {
+            font-weight: 550;
+            font-size: 12px;
+            line-height: 156%;
+            letter-spacing: 0.01em;
+            color: #000;
+        }
+    }
+}

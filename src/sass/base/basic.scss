@@ -22,3 +22,20 @@ ul[role="list"] {
     width: 100%;
     padding: 0 10px;
 }
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 70px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0 100px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+}

@@ -2,6 +2,7 @@
 
 
 .promo {
+    background-image:none;
     display: flex;
     background-color: black;
     width: 100%;
@@ -105,5 +106,13 @@
             }   
 
         }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .promo {
+        background-image: url(/src/img/Menwithweapon-1.png) center center / cover no-repeat; //?????????
+        display: block;
+        height: auto;
     }
 }

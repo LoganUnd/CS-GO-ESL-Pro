@@ -1,0 +1,91 @@
+@use "/src/sass/base/variables.scss" as *;
+
+*{
+    color: $tres;
+    caret-color: transparent;
+}
+
+.team {
+    background-color: black;
+    padding-bottom: 40px;
+    &__title {
+        padding-top: 20px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 141%;
+        color: $tres;
+    }
+    &__remain {
+        padding-top: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 180%;
+        color: $tres;
+        text-align: center;
+    }
+    .table {
+        display: grid;
+        width: auto;
+        grid-template-columns: 40px 1fr;
+        &__squad , &__coop{
+            border: 1px solid $duo;
+            background: $duo;
+            padding: 5px 15px;
+            color: #000;
+        }
+        &__player-number {
+            border: 1px solid $duo;
+            background: $uno;
+        }
+        &__player-name {
+            display: flex;
+            column-gap: 5px;
+            .figura {
+                margin-top: 2px;
+
+                .blue_block {
+                    width:  22px;
+                    height: 10px;
+                    background-color:#005BBB;
+                }
+                .yellow_block {
+                    width:  22px;
+                    height: 10px;
+                    background-color: #FFD500;
+                }
+            }
+            border: 1px solid $duo;
+            padding: 10px 10px 10px 20px;
+            background: $uno;
+        }
+    }
+    ul {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+        li {
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+#first {
+    text-align: center;
+    padding-top: 8px;
+    font-weight: 350;
+    font-size: 18px;
+
+}
+
+#second {
+    padding: 8px;
+    padding-left: 9px;
+    font-weight: 400;
+    font-size: 20px;
+}
+

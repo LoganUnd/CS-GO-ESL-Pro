@@ -5,12 +5,8 @@
 .events {
     background-color: rgb(18, 17, 17);
     width: 100%;
-    .slider {
-        @include slider;
-        .container {
-            padding: 0 23px;
-        }
-    }
+    padding-bottom: 22px;
+    
     &__result {
         text-align: center;
         font-weight: 700;
@@ -63,6 +59,20 @@
     }
 }
 
+.slider {
+    @include slider;
+    .container {
+        padding: 0 23px;
+    }}
+
+.slider_battle {
+        @include slider_battle;
+        .container {
+            padding: 0 23px;
+        }}
+
+        
+        
 
 .events__match-matches,
 .events__match-battles {
@@ -70,3 +80,7 @@
     align-items: center;
     justify-content: center;
 }
+
+
+
+

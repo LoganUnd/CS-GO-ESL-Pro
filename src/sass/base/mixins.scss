@@ -36,19 +36,46 @@
   min-height: 400px; 
 }
 
-.slider .hover_watch {
+.slider .hover_watch .watch_btn {
   display: none; /* or opacity: 0; pointer-events: none; */
-  .watch_btn {
-    display: none;
+}
+
+.slider .watch_btn {
+  display: none;
+}
+.slider:hover .hover_watch {
+  display: block; /* or opacity: 1; pointer-events: auto; */
+  
+}
+
+.slider:hover .watch_btn {
+  display: block;
+}
+
+
+
+.slider:hover .watch_btn {
+  width: 166px;
+  height: 40px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 66px;
+  top: -125px;
+  background: $duo;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  color: $tres;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  img {
+    margin: -7px auto;
   }
 }
 
-.slider:hover .hover_watch {
-  display: block; /* or opacity: 1; pointer-events: auto; */
-  .watch_btn {
-    display: block;
-  }
-}
 
 .slider:hover {
   box-shadow: 0 0 0 4px #F3A917, 0 4px 10px 0 rgba(5, 5, 5, 0.5);
@@ -59,7 +86,7 @@
 
 @mixin slider {
   position: relative;
-  margin: 20px auto;
+  margin: 20px auto 0 auto;
   display: block;
   border-radius: 10px;
   width: 336px;
@@ -167,26 +194,138 @@
     border-radius: 10px;
     box-shadow: 0 4px 4px 0 rgba(206, 225, 67, 0.25);
     background: rgba(7, 7, 7, 0.76);
-    .watch_btn {
-      width: 166px;
-      height: 40px;
-      padding: 10px 20px;
-      text-transform: uppercase;
-      position: absolute;
-      left: 66px;
-      top: -125px;
-      background: $duo;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 143%;
-      letter-spacing: 0.01em;
-      color: $tres;
-      text-align: center;
-      cursor: pointer;
-      border: none;
-      img {
-        margin: -7px auto;
-      }
-    }
   }
 }
+
+
+
+.slider_battle .hover_watch .watch_btn {
+  display: none; /* or opacity: 0; pointer-events: none; */
+}
+
+.slider_battle .watch_btn {
+  display: none;
+}
+.slider_battle:hover .hover_watch {
+  display: block; /* or opacity: 1; pointer-events: auto; */
+  
+}
+
+.slider_battle:hover .watch_btn {
+  display: block;
+}
+
+
+
+.slider_battle:hover .watch_btn {
+  width: 166px;
+  height: 40px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 66px;
+  top: -125px;
+  background: $duo;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  color: $tres;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  img {
+    margin: -7px auto;
+  }
+}
+
+
+.slider_battle:hover {
+  box-shadow: 0 0 0 4px #F3A917, 0 4px 10px 0 rgba(5, 5, 5, 0.5);
+  border: 1.5px solid #F3A917;
+  opacity: 36%;
+
+}
+
+
+@mixin slider_battle {
+  position: relative;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  width: 336px;
+  height: 235px;
+  background-color: $uno;
+  .slider__namecard {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+      &-match {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 143%;
+          letter-spacing: 0.01em;
+          color: $tres;
+      }}
+  .slider__line {
+    margin: 3px  0 0 0 ;
+    width: auto;
+    height: 1px;       
+    align-self: stretch;
+    stroke-width: 1px;
+    background-color: $duo;
+    z-index: 1;
+  }
+  .namecard__content {
+    padding-top: 19px;
+    display: flex;
+    column-gap: 20px;
+    img {
+      height: 25px;
+      width: 25px;
+    }
+    }
+  .slider__infocard {
+    margin-top: 11px;
+    position: relative;
+      &-names {
+          color: $tres;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 35px;
+      }
+      &-points {
+          position: absolute;
+          right: 0;
+          top: 25%;
+          display: flex;
+          padding: 5px 10px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border: 1px solid #F3A917;
+          color: $tres;
+          font-size: 14px;
+          font-weight: 700;
+      }
+  }
+  .slider__bottomcard {
+      &-time {
+          margin-top: 12px;
+          color: #757C84;
+          font-family: Montserrat;
+          font-size: 10px;
+          font-weight: 400;
+          letter-spacing: 0.1px;
+      }
+    }
+    &:hover .hover_watch {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(206, 225, 67, 0.25);
+    background: rgba(7, 7, 7, 0.76);
+    }
+    }

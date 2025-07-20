@@ -39,7 +39,7 @@ const swiper = new Swiper('.swiper', {
 
 try {
 	const tabs = document.querySelectorAll(".events__match-matches");
-	const contents = document.querySelectorAll(".catalog__content-item, .catalog__content-item-3");
+	const contents = document.querySelectorAll(".catalog__content-item, .catalog__content-item-4");
 
 	tabs.forEach((tab, index) => {
 		tab.addEventListener("click", () => {
